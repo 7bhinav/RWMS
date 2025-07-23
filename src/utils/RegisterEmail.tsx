@@ -60,7 +60,7 @@ export default function RegisterEmail(props: props) {
                             <Text>
                                 <strong className=" text-green-600">Track Your Progress:</strong> Keep an eye on your waste-dumping stats and see how you&apos;re making a difference in the world. You&apos;ll be amazed at how much of an impact you can have!
                             </Text>
-                            <Text>At RSWM, we believe that saving the planet should be fun and rewarding. So let's roll up our sleeves, get dumping, and earn some coupons along the way!</Text>
+                            <Text>At RSWM, we believe that saving the planet should be fun and rewarding. So let&apos;s roll up our sleeves, get dumping, and earn some coupons along the way!</Text>
                             <Text>Thanks for joining us on this exciting adventure. Together, we&apos;ll gamify waste management and make a difference, one dump at a time!</Text>
                             <Text>Best regards,</Text>
                             <Text>Team Mnemonics</Text>

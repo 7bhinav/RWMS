@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Bell, CircleCheck, CircleX, Cloud, History, Landmark, Recycle, X } from "lucide-react";
+import { Bell, Cloud, History, Landmark, Recycle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,38 +29,11 @@ export interface UserData {
     username: string;
     wasteDumped: any[]; // You might want to define a type for wasteDumped if it has a specific structure
 }
-interface MaterialData {
-    [key: string]: {
-        merits: string;
-        demerits: string;
-    };
-}
-
-const materialData: MaterialData = {
-    Plastic: {
-        merits: "Plastic is versatile and lightweight.",
-        demerits: "Plastic is non-biodegradable and contributes to pollution.",
-    },
-    Glass: {
-        merits: "Glass is recyclable and does not degrade over time.",
-        demerits: "Glass production requires a lot of energy.",
-    },
-    Paper: {
-        merits: "Paper is biodegradable and recyclable.",
-        demerits: "Paper production can lead to deforestation.",
-    },
-    Metal: {
-        merits: "Metal is durable and can be recycled repeatedly.",
-        demerits: "Metal extraction and processing can be energy-intensive.",
-    },
-};
 
 const Page = () => {
     const [user, setUserData] = useState<ApiResponse | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [openNotification, setOpenNotification] = useState<boolean>(false);
-    const [selectedMaterial, setSelectedMaterial] = useState<string | null>(null); // State to hold the selected material
-    const [openModal, setOpenModal] = useState<boolean>(false);
 
     const getUserData = async () => {
         try {
@@ -80,12 +53,6 @@ const Page = () => {
     useEffect(() => {
         getUserData();
     }, []);
-
-    // Function to handle opening the modal and setting the selected material
-    const handleMaterialClick = (material: string) => {
-        setSelectedMaterial(material);
-        setOpenModal(true);
-    };
 
     const calculateTotalCO2Saved = () => {
         if (!user || !user.userData || !user.userData.wasteDumped) return 0;
@@ -173,19 +140,19 @@ const Page = () => {
                                     <h1 className=" font-semibold  opacity-90 text-green-900 text-2xl tracking-wide">Materials</h1>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                                    <div onClick={() => handleMaterialClick("Plastic")} className="flex justify-center items-center flex-col gap-2  shadow-lg rounded-xl p-3 border-2 border-black/10 shadow-black/10">
+                                    <div onClick={() => {}} className="flex justify-center items-center flex-col gap-2  shadow-lg rounded-xl p-3 border-2 border-black/10 shadow-black/10">
                                         <Image src={bottle} alt="bottle" height={200} className=" h-24 w-24" width={200} />
                                         <h1>Plastic</h1>
                                     </div>
-                                    <div onClick={() => handleMaterialClick("Glass")} className="flex justify-center items-center flex-col  gap-2 shadow-lg rounded-xl p-3 border-2 border-black/10 shadow-black/10">
+                                    <div onClick={() => {}} className="flex justify-center items-center flex-col  gap-2 shadow-lg rounded-xl p-3 border-2 border-black/10 shadow-black/10">
                                         <Image src={glass} alt="bottle" height={200} className=" h-24 w-24" width={200} />
                                         <h1>Glass</h1>
                                     </div>
-                                    <div onClick={() => handleMaterialClick("Paper")} className="flex justify-center items-center flex-col gap-2  shadow-lg rounded-xl p-3 border-2 border-black/10 shadow-black/10">
+                                    <div onClick={() => {}} className="flex justify-center items-center flex-col gap-2  shadow-lg rounded-xl p-3 border-2 border-black/10 shadow-black/10">
                                         <Image src={paper} alt="bottle" height={200} className=" h-24 w-24" width={200} />
                                         <h1>Paper</h1>
                                     </div>
-                                    <div onClick={() => handleMaterialClick("Metal")} className="flex justify-center items-center flex-col gap-2  shadow-lg rounded-xl p-3 border-2 border-black/10 shadow-black/10">
+                                    <div onClick={() => {}} className="flex justify-center items-center flex-col gap-2  shadow-lg rounded-xl p-3 border-2 border-black/10 shadow-black/10">
                                         <Image src={metal} alt="bottle" height={200} className=" h-24 w-24" width={200} />
                                         <h1>Metal</h1>
                                     </div>

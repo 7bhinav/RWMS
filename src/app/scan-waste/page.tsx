@@ -100,6 +100,7 @@ const Page: React.FC = () => {
         if (photoData) {
             scanImage();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [photoData]);
 
     useEffect(() => {

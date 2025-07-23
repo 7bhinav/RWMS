@@ -70,6 +70,7 @@ const Page = () => {
         if (user && user.userData && user.userData.wasteDumped) {
             renderChart();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user]);
 
     const renderChart = () => {
@@ -134,7 +135,7 @@ const Page = () => {
                             <div className="flex justify-between w-full max-w-xs mb-6">
                                 <div className="flex flex-col items-center">
                                     <Landmark size={28} className="text-green-600 mb-1" />
-                                    <span className="font-bold text-lg text-gray-900">{user?.userData.totalPointsEarned || "0"}</span>
+                                    <span className="font-bold text-lg text-gray-900">{user?.userData?.totalPointsEarned || "0"}</span>
                                     <span className="uppercase text-xs opacity-60 font-semibold tracking-wider">Points</span>
                                 </div>
                                 <div className="w-px bg-gray-200 mx-4"></div>
