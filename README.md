@@ -9,7 +9,7 @@ A modern, responsive, and minimalist waste management web app built with Next.js
 
 | Home / Materials | Profile | Scan Waste | Bin Station (Google Maps) |
 |---|---|---|---|
-| ![Home/Materials](public/screenshots/4-home-materials.png) | ![Profile](public/screenshots/3-profile.png) | ![Scan Waste](public/screenshots/2-scan-waste.png) | ![Google Maps Error](public/screenshots/1-google-maps-error.png) |
+| ![Home/Materials](screenshots/4-home-materials.png) | ![Profile](screenshots/3-profile.png) | ![Scan Waste](screenshots/2-scan-waste.png) | ![Google Maps Error](screenshots/1-google-maps-error.png) |
 
 ## Features
 - User authentication (register, login, forgot password)
